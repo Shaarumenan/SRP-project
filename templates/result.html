@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #f2f2}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button{
+  border-radius: 10px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-raius: 25px;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  background-image: url({{ url_for ('static', filename = '17580.jpg') }});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+</style>
+</head>
+<body>
+<div>
+<table name="title" border="0">
+<tr>
+<td>
+<img src="{{ url_for ('static', filename = 'tyr11.jpg') }}" height="150" width="300"></td>
+<td width="680">
+<center><h1><font color="black">RESULT PAGE</h1></center>
+</td>
+<td><h2>
+<img src="{{ url_for ('static', filename = 'logo.png') }}" height="25" width="25" align="left"><p style="font-size:20;">1800-425-1660</p><h3><font color="darkpink">E-Mail:</font>
+resultanalyzer@gmail.com</h3>
+<table>
+<tr>
+<td align="right"><a href="/"><img src="{{ url_for ('static', filename = 'home.png') }}" height="60" width="60"></a></br>HOME</td>
+<td align="right"><a href="/about"><img src="{{ url_for ('static', filename = 'about.png') }}" height="60" width="60"></a></br>ABOUT</td>
+</tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<hr/><br>
+<hr/>
+
+<h2>{{details[0]}}, You scored....</h2>
+
+
+<script>
+ function export2Word( element ) {
+
+   var html, link, blob, url, css;
+
+   css = (
+     '<style>' +
+     '@page WordSection1{size: 841.95pt 595.35pt;mso-page-orientation: landscape;}' +
+     'div.WordSection1 {page: WordSection1;}' +
+     '</style>'
+   );
+
+   html = element.innerHTML;
+   blob = new Blob(['\ufeff', css + html], {
+     type: 'application/msword'
+   });
+   url = URL.createObjectURL(blob);
+   link = document.createElement('A');
+   link.href = url;
+   link.download = 'Document';  
+   document.body.appendChild(link);
+   if (navigator.msSaveOrOpenBlob ) navigator.msSaveOrOpenBlob( blob, 'Result.doc'); 
+       else link.click();  
+   document.body.removeChild(link);
+ };
+</script>
+
+<div id="docx">
+  <div class="WordSection1">
+
+     <table id="result">
+  <tr>
+    <th>Subject</th>
+    <th>Marks Scored</th>
+    <th>Class Average</th>
+  </tr>
+  <tr>
+    <td>Subject1</td>
+    <td>{{details[1]}}</td>
+    <td>{{avg1[0]}}</td>
+  </tr>
+  <tr>
+    <td>Subject2</td>
+    <td>{{details[2]}}</td>
+    <td>{{avg1[1]}}</td>
+  </tr>
+  <tr>
+    <td>Subject3</td>
+    <td>{{details[3]}}</td>
+    <td>{{avg1[2]}}</td>
+  </tr>
+  <tr>
+    <td>Subject4</td>
+    <td>{{details[4]}}</td>
+    <td>{{avg1[3]}}</td>
+</tr>
+<tr>
+    <td>Subject5</td>
+    <td>{{details[5]}}</td>
+    <td>{{avg1[4]}}</td>
+</tr>
+<tr>
+    <td>Subject6</td>
+    <td>{{details[6]}}</td>
+    <td>{{avg1[5]}}</td>
+</tr>
+<tr>
+    <td>Subject7</td>
+    <td>{{details[7]}}</td>
+    <td>{{avg1[6]}}</td>
+</tr>
+<tr>
+    <td>Subject8</td>
+    <td>{{details[8]}}</td>
+    <td>{{avg1[7]}}</td>
+</tr>
+</table>
+
+  </div>
+</div>
+<center><button onclick="export2Word(window.docx)">Download Result</button></br></br></br>Return to Student Page <a href="/student">Click here</a></center>
+</body>
+</html>
+</html>

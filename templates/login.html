@@ -1,0 +1,208 @@
+<!DOCTYPEhtml>
+
+<html>
+<head>
+<title>Login</title>
+
+<style type="text/css">
+		*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #f2f2}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+.button input[type="submit"]{
+  border-radius: 10px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-raius: 25px;
+}
+.button input[type="reset"]{
+  border-radius: 10px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-raius: 25px;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  background-image: url({{ url_for ('static', filename = '17580.jpg') }});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url({{ url_for ('static', filename = 'tyr1.jpg') }});
+  border-radius: 8px;
+  background-position: right;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+
+
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+
+}
+	
+</style>
+</head>
+
+<body>
+<div class="button">
+<div class="p">
+<table name="title" border="0">
+<tr>
+<td>
+<img src="{{ url_for ('static', filename = 'tyr11.jpg') }}" height="150" width="300"></td>
+<td width="680">
+<h1><font color="black">STUDENT LOGIN</h1>
+</td>
+<td><h2>
+<img src="{{ url_for ('static', filename = 'logo.png') }}" height="25" width="25" align="left"><p style="font-size:20;">1800-425-1660</p><h3><font color="darkpink">E-Mail:</font>
+resultanalyzer@gmail.com</h3>
+<table>
+<tr>
+<td align="right"><a href="/"><img src="{{ url_for ('static', filename = 'home.png') }}" height="60" width="60"></a></br>Home</td>
+<td align="right"><a href="/about"><img src="{{ url_for ('static', filename = 'about.png') }}" height="60" width="60"></a></br>About</td>
+</tr>
+
+</table>
+</td>
+</table>
+</td>
+</tr>
+</table>
+<center><b><u><h2><font color="black">WELCOME STUDENT</font></h2></b></u></center>
+<br>
+<hr/><br>
+<hr/>
+<form action="/login" method="POST">
+<h4><b>
+<p>
+ <div class="container">
+    <label for="rno"><b>Roll Number</b></label>
+    <input type="text" placeholder="Enter Roll No." name="una" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="de" required>  
+ 	
+  </div>
+<center><input type="submit" name="s1" value="LOG IN"></input><br><br>
+<input type="reset" name="res1" value="RESET"></input></center>
+</form>
+<br>
+<hr/>
+
+</body>
+</html>

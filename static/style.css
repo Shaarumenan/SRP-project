@@ -1,0 +1,42 @@
+.container {
+  text-align: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://cdn.wallpapersafari.com/78/14/2El0yh.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  color: antiquewhite;
+  font-family: "Bowlby One SC", cursive;
+}
+.button1 {
+  padding: 10px 100px 10px 100px;
+  margin: 30px 100px 20px 100px;
+  border-radius: 10px;
+  background-color: yellowgreen;
+}
+.button2 {
+  padding: 10px 80px 10px 80px;
+  margin: 30px 100px 20px 100px;
+  border-radius: 10px;
+  background-color: yellowgreen;
+}
+.container-1 {
+  margin-top: 90px;
+}
+a:hover {
+  color: black;
+}
+a {
+  font-style: italic;
+  font-family: "Bree Serif", serif;
+  font: medium;
+  font-size: 30px;
+}
+hr {
+  margin-top: 30px;
+  border: dashed white 6px;
+}

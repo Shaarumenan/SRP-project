@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #f2f2}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button{
+  border-radius: 10px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-raius: 25px;
+}
+button input[type="submit"]{
+  border-radius: 10px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-raius: 25px;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  background-image: url({{ url_for ('static', filename = '17580.jpg') }});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+</style>
+</head>
+<body>
+<div>
+<table name="title" border="0">
+<tr>
+<td>
+<img src="{{ url_for ('static', filename = 'tyr11.jpg') }}" height="150" width="300"></td>
+<td width="680">
+<center><h1><font color="black">Student PAGE</h1></center>
+</td>
+<td><h2>
+<img src="{{ url_for ('static', filename = 'logo.png') }}" height="25" width="25" align="left"><p style="font-size:20;">1800-425-1660</p><h3><font color="darkpink">E-Mail:</font>
+resultanalyzer@gmail.com</h3>
+<table>
+<tr>
+<td align="right"><a href="/"><img src="{{ url_for ('static', filename = 'home.png') }}" height="60" width="60"></a></br>HOME</td>
+<td align="right"><a href="/about"><img src="{{ url_for ('static', filename = 'about.png') }}" height="60" width="60"></a></br>ABOUT</td>
+</tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<hr/><br>
+<hr/>
+<h2>Welcome {{ nametxt }} : </h2>
+
+<h3>Hello,<b>{{nametxt}}</b>. Here you can view your academic performances along with the class averages.</h3>
+<form action="/result">
+<center><button><input type="submit" name="s1" value="RESULT"></input></center></button>
+</form></br>
+<h3>If you have any doubt in any subjects, you can submit it here. All your doubts will be stored and will be showed to the respective faculty</h3>
+<form action="/doubt">
+<center><button><input type="submit" name="s2" value="DOUBT"></input></center></button>
+</form>
+
+</html>
